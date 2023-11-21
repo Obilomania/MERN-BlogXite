@@ -33,6 +33,7 @@ function App() {
     <BrowserRouter>
       <Routes>
           
+        <Route path="/" element={<Home />} />
         <Route path="/post/:id" element={<PostDetail />} />
         <Route path="*" element={<NotFound />} />
 

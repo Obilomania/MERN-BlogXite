@@ -23,8 +23,8 @@ const Profile = () => {
       const data = await getProfile();
       setProfile(data);
       setIsLoading(false);
-      await dispatch(Set_User(data));
-      await dispatch(User_Fullname(data.name));
+       dispatch(Set_User(data));
+       dispatch(User_Fullname(data.name));
     }
     getUserData();
   }, [dispatch]);
