@@ -5,13 +5,10 @@ const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const userRoute = require("./Routes/userRoute");
-const postRoute = require("./Routes/postRoute")
+const postRoute = require("./Routes/postRoute");
 const commentRoute = require("./Routes/commentRoute");
 const errorHandler = require("./middlewares/errorMiddleware");
 const path = require("path");
-
-
-
 
 const app = express();
 //Middleswares
@@ -21,10 +18,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(
   cors({
-    origin: [ 
+    origin: [
       "http://localhost:3000",
       "http://localhost:3001",
       "https://blogxite.onrender.com",
+      "*",
     ],
     credentials: true,
   })
