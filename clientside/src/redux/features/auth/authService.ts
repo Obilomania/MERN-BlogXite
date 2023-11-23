@@ -10,7 +10,7 @@ export const validateEmail = async (email: string) => {
 
 export const registerUser = async (userData: registrationData) => {
     try {
-        const response = await axios.post("http://localhost:5000/api/user/register", userData, { withCredentials: true })
+        const response = await axios.post("https://blogxiteapi.onrender.com/api/user/register", userData, { withCredentials: true })
         if (response.statusText === "Created") {
             toastNotify("Registration is successful", "success")
         }        
@@ -27,7 +27,7 @@ export const registerUser = async (userData: registrationData) => {
 
 export const loginUser = async (userData: loginData) => {
     try {
-        const response = await axios.post("http://localhost:5000/api/user/login", userData, { withCredentials: true })
+        const response = await axios.post("https://blogxiteapi.onrender.com/api/user/login", userData, { withCredentials: true })
         if (response.statusText === "OK" || response.status === 200) {
             toastNotify("Login is successful", "success")
         }
@@ -44,7 +44,7 @@ export const loginUser = async (userData: loginData) => {
 
 export const updateUser = async (userData: any) => {
     try {
-        const response = await axios.patch("http://localhost:5000/api/user/updateuser", userData, { withCredentials: true })
+        const response = await axios.patch("https://blogxiteapi.onrender.com/api/user/updateuser", userData, { withCredentials: true })
         if (response.statusText === "OK" || response.status === 200) {
             toastNotify("User Profile Updated", "success")
         }
@@ -61,7 +61,7 @@ export const updateUser = async (userData: any) => {
 
 export const logoutUser = async () => {
     try {
-        const response = await axios.get("http://localhost:5000/api/user/logout")
+        const response = await axios.get("https://blogxiteapi.onrender.com/api/user/logout")
         if (response.statusText === "OK" || response.status === 200) {
             toastNotify("Logout is successful", "success")
         }
@@ -80,7 +80,7 @@ export const logoutUser = async () => {
 
 export const forgotPassword = async (userData: any) => {
     try {
-        const response = await axios.post("http://localhost:5000/api/user/forgotpassword", userData,)
+        const response = await axios.post("https://blogxiteapi.onrender.com/api/user/forgotpassword", userData,)
         if (response.statusText === "OK" || response.status === 200) {
             toastNotify("Password Change Successful!!!", "success")
         }
@@ -98,7 +98,7 @@ export const forgotPassword = async (userData: any) => {
 
 export const changePassword = async (userData: any) => {
     try {
-        const response = await axios.patch("http://localhost:5000/api/user/changepassword", userData,)
+        const response = await axios.patch("https://blogxiteapi.onrender.com/api/user/changepassword", userData,)
         if (response.statusText === "OK" || response.status === 200) {
             toastNotify(response.data.message, "success")
         }
@@ -115,7 +115,7 @@ export const changePassword = async (userData: any) => {
 
 export const loginStatus = async () => {
     try {
-        const response = await axios.get("http://localhost:5000/api/user/loggedin")
+        const response = await axios.get("https://blogxiteapi.onrender.com/api/user/loggedin")
         if (response.statusText === "OK" || response.status === 200) {
             toastNotify(response.data.message, "success")
         }
@@ -132,7 +132,7 @@ export const loginStatus = async () => {
 
 export const resetPassword = async (userData: any, resetToken: any) => {
     try {
-        const response = await axios.put(`http://localhost:5000/api/user/resetpassword/${resetToken}`, userData, { withCredentials: true })
+        const response = await axios.put(`https://blogxiteapi.onrender.com/api/user/resetpassword/${resetToken}`, userData, { withCredentials: true })
         if (response.statusText === "OK" || response.status === 200) {
             toastNotify(response.data.message, "success")
         }
@@ -150,7 +150,7 @@ export const resetPassword = async (userData: any, resetToken: any) => {
 
 export const getProfile = async () => {
     try {
-        const response = await axios.get("http://localhost:5000/api/user/getuser")
+        const response = await axios.get("https://blogxiteapi.onrender.com/api/user/getuser")
         if (response.statusText === "OK" || response.status === 200) {
             toastNotify(response.data.message, "success")
         }

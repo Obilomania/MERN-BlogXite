@@ -4,27 +4,27 @@ import createPostInterface from "../../../interfaces/createPostInterface";
 
 //Create New Post
 const createPost = async (postData : createPostInterface) => {
-    const response = await axios.post("http://localhost:5000/api/post", postData)
+    const response = await axios.post("https://blogxiteapi.onrender.com/api/post", postData)
     return response.data;
 }
 
 //Get All Post
 const getAllPost = async () => {
-    const response = await axios.get("http://localhost:5000/api/post")
+    const response = await axios.get("https://blogxiteapi.onrender.com/api/post")
     return response.data;
 }
 
 
 //Delete A Post
 const deletePost = async (id:any) => {
-    const response = await axios.delete(`http://localhost:5000/api/post/${id}`)
+    const response = await axios.delete(`https://blogxiteapi.onrender.com/api/post/${id}`)
     return response.data;
 }
 
 
 //Get A Post
 const getPost = async (id: any) => {
-    const response = await axios.get(`http://localhost:5000/api/post/${id}`)
+    const response = await axios.get(`https://blogxiteapi.onrender.com/api/post/${id}`)
     return response.data;
 }
 
