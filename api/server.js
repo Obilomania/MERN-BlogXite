@@ -7,7 +7,7 @@ const cors = require("cors");
 const userRoute = require("./Routes/userRoute");
 const postRoute = require("./Routes/postRoute");
 const commentRoute = require("./Routes/commentRoute");
-const errorHandler = require("./middlewares/errorMiddleware");
+const errorHandler = require("./MiddleWares/errorMiddleware");
 const path = require("path");
 
 const app = express();

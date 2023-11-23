@@ -54,8 +54,8 @@ const Login = () => {
         email: userInput.email,
         password: userInput.password,
       });
-      await dispatch(User_Loggedin(true));
-      await dispatch(User_Fullname(userData.name));
+       dispatch(User_Loggedin(true));
+       dispatch(User_Fullname(userData.name));
       navigate("/");
       setIsLoading(false);
     } catch (error) {

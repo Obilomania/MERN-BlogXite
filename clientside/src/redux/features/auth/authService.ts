@@ -1,4 +1,4 @@
-import axios, { AxiosError } from 'axios';
+import axios  from 'axios';
 import registrationData from "../../../interfaces/registrationData"
 import toastNotify from "../../../Helpers/toastNotify";
 import loginData from "../../../interfaces/loginInterface";

@@ -21,9 +21,9 @@ const Header = () => {
 
   const logOut = async () => {
     await logoutUser();
-    await dispatch(User_Loggedin(false));
-    await dispatch(User_Fullname({ name: "" }));
-    await dispatch(
+     dispatch(User_Loggedin(false));
+     dispatch(User_Fullname({ name: "" }));
+     dispatch(
       Set_User({
         name: "",
         email: "",
