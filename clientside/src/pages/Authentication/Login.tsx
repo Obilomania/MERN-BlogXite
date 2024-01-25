@@ -6,10 +6,8 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import toastNotify from "../../Helpers/toastNotify";
 import { useDispatch } from "react-redux";
 import {
-  Set_User,
   User_Loggedin,
 } from "../../redux/features/auth/userAuthSlice";
-import userModel from "../../interfaces/userModel";
 import {
   loginUser,
   validateEmail,

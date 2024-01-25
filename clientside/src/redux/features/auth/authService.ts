@@ -3,6 +3,8 @@ import registrationData from "../../../interfaces/registrationData"
 import toastNotify from "../../../Helpers/toastNotify";
 import loginData from "../../../interfaces/loginInterface";
 
+export const BACKEND_URL = `${process.env.REACT_APP_BACKEND_URL}/api`
+
 
 export const validateEmail = async (email: string) => {
     return email.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
@@ -10,7 +12,7 @@ export const validateEmail = async (email: string) => {
 
 export const registerUser = async (userData: registrationData) => {
     try {
-        const response = await axios.post("https://blogxiteapi.onrender.com/api/user/register", userData, { withCredentials: true })
+        const response = await axios.post("{$BACKEND_URL}/api/user/register", userData, { withCredentials: true })
         if (response.statusText === "Created") {
             toastNotify("Registration is successful", "success")
         }        

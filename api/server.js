@@ -22,6 +22,7 @@ app.use(
       "http://localhost:3000",
       "http://localhost:3001",
       "https://blogxite.onrender.com",
+      "https://mern-blog-xite.vercel.app",
       "*",
     ],
     credentials: true,
